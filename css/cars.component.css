@@ -1,0 +1,13 @@
+app-cars.container {
+  width: 90%;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 774px) {
+  app-cars.container {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=cars.component.css.map */

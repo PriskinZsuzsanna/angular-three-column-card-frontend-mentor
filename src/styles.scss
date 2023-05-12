@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: $VeryLightGray;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.app-component {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+app-cars.container {
+    width: 90%;
+    margin-block: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 774px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+app-car.car {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+    .img-div {
+        width: 65px;
+        height: 41px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 3rem;
+    }
+
+    p{
+        color: $TransparentWhite;
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+}
+
+app-car.car:nth-of-type(1) {
+    background: $BrightOrange;
+    border-radius: .5rem .5rem 0 0;
+
+    .img-div {
+        background: url(assets/images/icon-sedans.svg) no-repeat center/cover;
+    }
+
+    button{
+        color: $BrightOrange;
+    }
+
+    @media screen and (min-width: 774px){
+        border-radius: .5rem 0 0 .5rem;
+    }
+}
+app-car.car:nth-of-type(2) {
+    background: $DarkCyan;
+
+    .img-div {
+        background: url(assets/images/icon-suvs.svg) no-repeat center/cover;
+    }
+    
+    button{
+        color: $DarkCyan;
+    }
+}
+app-car.car:nth-of-type(3) {
+    background: $VeryDarkCyan;
+    border-radius: 0 0 .5rem .5rem;
+
+    .img-div {
+        background: url(assets/images/icon-luxury.svg) no-repeat center/cover;
+    }
+
+    button{
+        color: $VeryDarkCyan;
+    }
+
+    @media screen and (min-width: 774px){
+        border-radius: 0 .5rem .5rem 0;
+    }
+}
