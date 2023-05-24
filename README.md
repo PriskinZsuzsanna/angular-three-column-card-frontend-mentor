@@ -15,5 +15,6 @@ What I learned:
   background: url(assets/images/icon-suvs.svg) no-repeat center/cover;
 
 Links
+https://priskinzsuzsanna.github.io/angular-three-column-card-frontend-mentor/
 
 Screenshot
