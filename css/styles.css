@@ -12,6 +12,11 @@ body {
   color: hsl(0, 0%, 95%);
 }
 
+img {
+  width: 100px;
+  height: 100px;
+}
+
 .app-component {
   width: 100%;
   min-height: 100vh;
@@ -23,24 +28,24 @@ body {
 app-cars.container {
   width: 90%;
   margin-block: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 @media screen and (min-width: 774px) {
   app-cars.container {
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 app-car.car {
   padding: 3rem;
+  padding-bottom: 8rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
+  position: relative;
 }
 app-car.car .img-div {
   width: 65px;
@@ -61,9 +66,12 @@ app-car.car button {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 400;
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: 2rem;
 }
 
 app-car.car:nth-of-type(1) {
@@ -75,6 +83,11 @@ app-car.car:nth-of-type(1) .img-div {
 }
 app-car.car:nth-of-type(1) button {
   color: hsl(31, 77%, 52%);
+}
+app-car.car:nth-of-type(1) button:hover {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 @media screen and (min-width: 774px) {
   app-car.car:nth-of-type(1) {
@@ -91,6 +104,11 @@ app-car.car:nth-of-type(2) .img-div {
 app-car.car:nth-of-type(2) button {
   color: hsl(184, 100%, 22%);
 }
+app-car.car:nth-of-type(2) button:hover {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
 
 app-car.car:nth-of-type(3) {
   background: hsl(179, 100%, 13%);
@@ -101,6 +119,11 @@ app-car.car:nth-of-type(3) .img-div {
 }
 app-car.car:nth-of-type(3) button {
   color: hsl(179, 100%, 13%);
+}
+app-car.car:nth-of-type(3) button:hover {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 @media screen and (min-width: 774px) {
   app-car.car:nth-of-type(3) {
