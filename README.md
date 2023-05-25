@@ -1,27 +1,22 @@
 # ThreeColumnCardFrontendMentor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Built with
 
-## Development server
+ - Angular
+ - SCSS
+ - MOBILE-FIRST WORKFLOW
+ 
+What I learned:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ - ng generate component
+ - use mock data base with interface
+ - passing data to child:   @Input() car: Car
+ - <app-car *ngFor="let car of cars" [car] = "car" class="car"></app-car>
+ - set svg img as background: app-car.car:nth-of-type(2) .img-div {
+  background: url(assets/images/icon-suvs.svg) no-repeat center/cover;
 
-## Code scaffolding
+Links
+https://priskinzsuzsanna.github.io/angular-three-column-card-frontend-mentor/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Screenshot
+![png](https://github.com/PriskinZsuzsanna/angular-three-column-card-frontend-mentor/assets/121173949/a59099d5-d79a-406a-bf37-44d4da794042)
