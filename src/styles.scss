@@ -31,6 +31,7 @@ img {
 
 app-cars.container {
     width: 90%;
+    max-width: 1200px;
     margin-block: 1rem;
     display: grid;
     grid-template-columns: 1fr;
